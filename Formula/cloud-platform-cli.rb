@@ -5,29 +5,29 @@
 class CloudPlatformCli < Formula
   desc "Multi-purpose CLI for Ministry of Justice Cloud Platform."
   homepage "https://user-guide.cloud-platform.service.justice.gov.uk/#cloud-platform-user-guide"
-  version "1.9.4"
+  version "1.9.6"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.4/cloud-platform-cli_1.9.4_darwin_amd64.tar.gz"
-    sha256 "3783796924c5c2b40ab463d4aef36a495b2968bcc5ac2d836939f9ab85d05329"
+    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.6/cloud-platform-cli_1.9.6_darwin_amd64.tar.gz"
+    sha256 "295f5ffdef54b895843e7f97f491d7615ab875737e5fcd70dd865758d7ed7c5e"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.4/cloud-platform-cli_1.9.4_darwin_arm64.tar.gz"
-    sha256 "f736fad8ffcc577829400143db0e88a0c8edeee1f67548ae717b31bc29c14523"
+    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.6/cloud-platform-cli_1.9.6_darwin_arm64.tar.gz"
+    sha256 "908f10166de58b4a9a66d4c1bec1cda35c9eec60f53e449e7fd529abc0e2e28e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.4/cloud-platform-cli_1.9.4_linux_amd64.tar.gz"
-    sha256 "a3c5b0951296a495d5055d242a6186b123cd841d33336e4cac4a0f630a9332b1"
+    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.6/cloud-platform-cli_1.9.6_linux_amd64.tar.gz"
+    sha256 "a9d028e2b55e814bed31c75c0226db4ce4e591a3572c4ca12d38aae09d7bcaa5"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.4/cloud-platform-cli_1.9.4_linux_armv6.tar.gz"
-    sha256 "b2c0c5cf002e6bdf4bcae6dd90a76cb6101150cb86d276a0b9d11f3c513f3156"
+    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.6/cloud-platform-cli_1.9.6_linux_armv6.tar.gz"
+    sha256 "9e65d2fb68a4ff1750b043ca65e2ebd7fa44c25ebabc9e56c8cabb0e9317ed86"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.4/cloud-platform-cli_1.9.4_linux_arm64.tar.gz"
-    sha256 "8b3ff51a40b98f93d5f0d72f4f7863a085cb1ccdcbd43683e646853cbede10bd"
+    url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.9.6/cloud-platform-cli_1.9.6_linux_arm64.tar.gz"
+    sha256 "d325cf7b78599faebf5db6efefad3c7222b803a8cdab0dec323c2cb9152fff66"
   end
 
   depends_on "go"
