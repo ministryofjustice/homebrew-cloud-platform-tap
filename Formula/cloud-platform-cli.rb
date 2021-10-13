@@ -12,26 +12,26 @@ class CloudPlatformCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.12.4/cloud-platform-cli_1.12.4_darwin_arm64.tar.gz"
-      sha256 "478528c40185dd9a45013d285b9e502c993e4ac9861c6f40540fd2f6683b1fa2"
+      sha256 "dde7588995fdab064e3189957c75baec6a831eecb6b1c34cfb1beb4f9e79f5ec"
     end
     if Hardware::CPU.intel?
       url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.12.4/cloud-platform-cli_1.12.4_darwin_amd64.tar.gz"
-      sha256 "3dd4800b330cc4e132d40767f8da322b827f204bcc45bf6f518b0e3e9d376422"
+      sha256 "aae3752929b60f6b94deebfe631fada15f6d3fd581623df700364946ea19acc5"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.12.4/cloud-platform-cli_1.12.4_linux_armv6.tar.gz"
-      sha256 "528f2c6b331cb5e89a76677760e0d0c9be4a8f1e2ceb9ceb9c2918cdca11c70c"
+      sha256 "c0f35d3909a77ee8d7ab232ad0cd4b7038d3b9feb7fdda103e3d1de96d94cd9d"
     end
     if Hardware::CPU.intel?
       url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.12.4/cloud-platform-cli_1.12.4_linux_amd64.tar.gz"
-      sha256 "50795dbc8bfe61d20f76bda34fead161cedec32f2852e2c430ba5fe140d429ef"
+      sha256 "65aec5a4e1c4f680a42a410afcddb0348acc267af977b043165311d184deae4c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.12.4/cloud-platform-cli_1.12.4_linux_arm64.tar.gz"
-      sha256 "6575a72adfe7150b99a7fa0613506c51fe6a45b398ff95553ceaff1156fc9a34"
+      sha256 "6575a01e1a25fbdf9117184927fa589d5fe744b91b1dedb1383aaaf55690e130"
     end
   end
 
