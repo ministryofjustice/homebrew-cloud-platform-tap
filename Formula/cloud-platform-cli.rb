@@ -7,7 +7,6 @@ class CloudPlatformCli < Formula
   homepage "https://user-guide.cloud-platform.service.justice.gov.uk/#cloud-platform-user-guide"
   version "1.12.6"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
