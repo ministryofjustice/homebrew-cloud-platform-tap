@@ -9,14 +9,6 @@ class CloudPlatformCli < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/v1.12.8/cloud-platform-cli_1.12.8_darwin_amd64.tar.gz"
-      sha256 "ce9772a33a009d64e628b654fa58e814b754615c4334730a5b437fe41428b206"
-
-      def install
-        bin.install "cloud-platform"
-      end
-    end
     if Hardware::CPU.arm?
       url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/v1.12.8/cloud-platform-cli_1.12.8_darwin_arm64.tar.gz"
       sha256 "dbe72a18d99aab37cb09eebe2b631722025e00eabf41beab02eb7c9678727f67"
@@ -25,20 +17,28 @@ class CloudPlatformCli < Formula
         bin.install "cloud-platform"
       end
     end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/v1.12.8/cloud-platform-cli_1.12.8_linux_armv6.tar.gz"
-      sha256 "b086a75de09357840d24bf115083ca9cb23baa7c949fba151e78724f6f8a6619"
+    if Hardware::CPU.intel?
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/v1.12.8/cloud-platform-cli_1.12.8_darwin_amd64.tar.gz"
+      sha256 "ce9772a33a009d64e628b654fa58e814b754615c4334730a5b437fe41428b206"
 
       def install
         bin.install "cloud-platform"
       end
     end
+  end
+
+  on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/v1.12.8/cloud-platform-cli_1.12.8_linux_arm64.tar.gz"
       sha256 "7b27d558c830758ecd76acaf91a1da4990fa835c9032365a2224bca1b2756737"
+
+      def install
+        bin.install "cloud-platform"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/v1.12.8/cloud-platform-cli_1.12.8_linux_armv6.tar.gz"
+      sha256 "b086a75de09357840d24bf115083ca9cb23baa7c949fba151e78724f6f8a6619"
 
       def install
         bin.install "cloud-platform"
