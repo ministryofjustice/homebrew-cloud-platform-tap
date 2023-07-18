@@ -5,15 +5,15 @@
 class CloudPlatformCli < Formula
   desc "Multi-purpose CLI for Ministry of Justice Cloud Platform."
   homepage "https://user-guide.cloud-platform.service.justice.gov.uk/#cloud-platform-user-guide"
-  version "1.28.1"
+  version "1.28.2"
   license "MIT"
 
   depends_on "go"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.1/cloud-platform-cli_1.28.1_darwin_amd64.tar.gz"
-      sha256 "ec923d8dc65ed1bb558b272204af7c5d408e3ddb0fb460a3ddaf9c9f628a42eb"
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.2/cloud-platform-cli_1.28.2_darwin_amd64.tar.gz"
+      sha256 "bb7736088d85beae6e7e3acdc6b6fca49cbf2359fa144150e4c93723f5b54c2b"
 
       def install
         bin.install "cloud-platform"
@@ -23,8 +23,8 @@ class CloudPlatformCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.1/cloud-platform-cli_1.28.1_darwin_arm64.tar.gz"
-      sha256 "abd7616ed13aeae980f5baae8501e57007ae6b98c5d59ae6ba9b9a33f29d23b3"
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.2/cloud-platform-cli_1.28.2_darwin_arm64.tar.gz"
+      sha256 "fdc01b23835258944c498df9c01d7a90d58704700b00c4f27c80ca39eddf9a47"
 
       def install
         bin.install "cloud-platform"
@@ -36,9 +36,9 @@ class CloudPlatformCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.1/cloud-platform-cli_1.28.1_linux_armv6.tar.gz"
-      sha256 "17d166447d819b95907c08d51a109985e72b216dd3a9244addc2c35192ed661b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.2/cloud-platform-cli_1.28.2_linux_arm64.tar.gz"
+      sha256 "d1f0ae411e23aebb597f98fc6ee20fb1a27682147d8fa8be382ac7d4d4c6e31a"
 
       def install
         bin.install "cloud-platform"
@@ -47,9 +47,9 @@ class CloudPlatformCli < Formula
         fish_completion.install "completions/cloud-platform.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.1/cloud-platform-cli_1.28.1_linux_arm64.tar.gz"
-      sha256 "a6895e98719502d5602ff81bfd2179fa2df0c41958fa315abdae9815757a4d09"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.2/cloud-platform-cli_1.28.2_linux_armv6.tar.gz"
+      sha256 "281f30d8c34d6adf8b4fe13b41b3c2aecf90b3e1715e43552714070567615092"
 
       def install
         bin.install "cloud-platform"
@@ -59,8 +59,8 @@ class CloudPlatformCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.1/cloud-platform-cli_1.28.1_linux_amd64.tar.gz"
-      sha256 "532ddba1742a7f8a9dbb3ddb7a3c3ee6367da0a1ca092e2d3577cd062280d9f6"
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.28.2/cloud-platform-cli_1.28.2_linux_amd64.tar.gz"
+      sha256 "d8c8c610ae35d8576e1c82308b4d5157d60da1d43f7ceb295aa3d056d9849ffe"
 
       def install
         bin.install "cloud-platform"
