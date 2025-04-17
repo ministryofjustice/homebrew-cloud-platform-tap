@@ -5,15 +5,15 @@
 class CloudPlatformCli < Formula
   desc "Multi-purpose CLI for Ministry of Justice Cloud Platform."
   homepage "https://user-guide.cloud-platform.service.justice.gov.uk/#cloud-platform-user-guide"
-  version "1.42.1"
+  version "1.43.0"
   license "MIT"
 
   depends_on "go"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.42.1/cloud-platform-cli_1.42.1_darwin_amd64.tar.gz"
-      sha256 "b69cedb71c59ab8c5c3c40aa75ac53a3e36cc34154de3f6531ae65a2b36df1e1"
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.43.0/cloud-platform-cli_1.43.0_darwin_amd64.tar.gz"
+      sha256 "b63bf4e77812c273b1fce27cd29e42fbc38c2478a392346d11961386936cedbe"
 
       def install
         bin.install "cloud-platform"
@@ -23,8 +23,8 @@ class CloudPlatformCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.42.1/cloud-platform-cli_1.42.1_darwin_arm64.tar.gz"
-      sha256 "aa5d1e4e7c2e28b4a1a0834982779e31e930d71fdaede7c9d17c30c7a52ccc93"
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.43.0/cloud-platform-cli_1.43.0_darwin_arm64.tar.gz"
+      sha256 "55e2730c4456233c3a81a4ce3712456e73da34701be57407194f42b8912a2ba3"
 
       def install
         bin.install "cloud-platform"
@@ -38,8 +38,8 @@ class CloudPlatformCli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.42.1/cloud-platform-cli_1.42.1_linux_amd64.tar.gz"
-        sha256 "1f77d9c8f2cc6be96ba34e99ab87290312eb73a07f8e096633bb758d62127c1d"
+        url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.43.0/cloud-platform-cli_1.43.0_linux_amd64.tar.gz"
+        sha256 "2a22b1a5dead88de76e3217a2303c316b0c6d900265b682492f60e009a8c8e9e"
 
         def install
           bin.install "cloud-platform"
@@ -51,8 +51,8 @@ class CloudPlatformCli < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.42.1/cloud-platform-cli_1.42.1_linux_armv6.tar.gz"
-        sha256 "25c1c2c08ad68cae187d61dc72d45c1d8a4dd3e3f7741deb4b8137b69f6c34e8"
+        url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.43.0/cloud-platform-cli_1.43.0_linux_armv6.tar.gz"
+        sha256 "e6162f84f5044db58814f76ae96109a17818e6bff1db7e812dff3cf67024fd93"
 
         def install
           bin.install "cloud-platform"
@@ -64,8 +64,8 @@ class CloudPlatformCli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.42.1/cloud-platform-cli_1.42.1_linux_arm64.tar.gz"
-        sha256 "455fc20d707a1acf0a1409c50c5560b573f5923e63a6411734e233c58ea6416b"
+        url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.43.0/cloud-platform-cli_1.43.0_linux_arm64.tar.gz"
+        sha256 "85408ce7570339bc4c0334fad4013a20cfc76f040d987ba3b1295811e008df30"
 
         def install
           bin.install "cloud-platform"
