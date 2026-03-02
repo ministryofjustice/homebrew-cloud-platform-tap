@@ -5,17 +5,17 @@
 class CloudPlatformCli < Formula
   desc "Multi-purpose CLI for Ministry of Justice Cloud Platform."
   homepage "https://user-guide.cloud-platform.service.justice.gov.uk/#cloud-platform-user-guide"
-  version "1.50.3"
+  version "1.50.9"
   license "MIT"
 
   depends_on "go"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.3/cloud-platform-cli_1.50.3_darwin_amd64.tar.gz"
-      sha256 "4a960e924607c84316b3c4a1b083492d1be9d0e1c9f91d275d716a3985e62f03"
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.9/cloud-platform-cli_1.50.9_darwin_amd64.tar.gz"
+      sha256 "fffc3bb05b351a4f49333c4ec5410bb4eed971cb853e53d08e4ae3f2b22147bf"
 
-      def install
+      define_method(:install) do
         bin.install "cloud-platform"
         bash_completion.install "completions/cloud-platform.bash" => "cloud-platform"
         zsh_completion.install "completions/cloud-platform.zsh" => "_cloud-platform"
@@ -23,10 +23,10 @@ class CloudPlatformCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.3/cloud-platform-cli_1.50.3_darwin_arm64.tar.gz"
-      sha256 "e8741ef75f9254ba049731f1e1fc04673c5c7d409bbdbe21f9947bae7ac85389"
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.9/cloud-platform-cli_1.50.9_darwin_arm64.tar.gz"
+      sha256 "38249297e14cb4baa3569f1a5c64083af9d00994244d5bf8249c1d201887928f"
 
-      def install
+      define_method(:install) do
         bin.install "cloud-platform"
         bash_completion.install "completions/cloud-platform.bash" => "cloud-platform"
         zsh_completion.install "completions/cloud-platform.zsh" => "_cloud-platform"
@@ -37,9 +37,9 @@ class CloudPlatformCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.3/cloud-platform-cli_1.50.3_linux_amd64.tar.gz"
-      sha256 "ea112cd6f04daab567d7771a81926e6d1beda35fdb7f17724eded463c2a09022"
-      def install
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.9/cloud-platform-cli_1.50.9_linux_amd64.tar.gz"
+      sha256 "75db12fec4f2099a6a6a67a15bd6473909a29c5ef25f86466140f3b0b0c7be59"
+      define_method(:install) do
         bin.install "cloud-platform"
         bash_completion.install "completions/cloud-platform.bash" => "cloud-platform"
         zsh_completion.install "completions/cloud-platform.zsh" => "_cloud-platform"
@@ -47,9 +47,9 @@ class CloudPlatformCli < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.3/cloud-platform-cli_1.50.3_linux_armv6.tar.gz"
-      sha256 "f8a62c1caedd00e23154bfdbc0da12866d8aba132d3f588cc96ace364e04c781"
-      def install
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.9/cloud-platform-cli_1.50.9_linux_armv6.tar.gz"
+      sha256 "84c8dda47f8b415c2f39e7774433b88b8bc4dc8f67751f8a62030b863dd7f9ee"
+      define_method(:install) do
         bin.install "cloud-platform"
         bash_completion.install "completions/cloud-platform.bash" => "cloud-platform"
         zsh_completion.install "completions/cloud-platform.zsh" => "_cloud-platform"
@@ -57,9 +57,9 @@ class CloudPlatformCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.3/cloud-platform-cli_1.50.3_linux_arm64.tar.gz"
-      sha256 "5aba56f2cb2dfdf062f75bf10ac712922f5211a418dfc0902f7b1a09b74340f3"
-      def install
+      url "https://github.com/ministryofjustice/cloud-platform-cli/releases/download/1.50.9/cloud-platform-cli_1.50.9_linux_arm64.tar.gz"
+      sha256 "82a2ad97755c1cb240cc840e1ed3480d02a04643ced876aa276df5728acc3050"
+      define_method(:install) do
         bin.install "cloud-platform"
         bash_completion.install "completions/cloud-platform.bash" => "cloud-platform"
         zsh_completion.install "completions/cloud-platform.zsh" => "_cloud-platform"
